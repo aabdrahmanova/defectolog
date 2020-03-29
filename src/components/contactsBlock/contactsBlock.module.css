@@ -1,0 +1,67 @@
+.left {
+    width: 60%;
+    height: 100%;
+    float: left;
+    z-index: 1010;
+    padding: 300px 50px 50px 8%;
+
+}
+
+.right {
+    width: 40%;
+    height: 100%;
+    float: right;
+    background-color: #ded7d6;
+    padding: 300px 8% 50px 50px;
+}
+
+/* .contactsBlock {
+    height: 100vh;
+    position: relative;
+    z-index: 1001;
+    background-color: #fefefe;
+} */
+
+.title {
+    position: absolute;
+    left: 45%;
+}
+
+.tel {
+    padding: 0;
+}
+
+.social {
+    margin-top: 50px;
+    display: flex;
+    width: 350px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.vk {
+    background: url(/images/vk.png);
+}
+
+.inst {
+    background: url(/images/insta.png);
+}
+
+/* .whatsapp {
+    background: url(/images/whatsapp.png);
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+} */
+
+.telegram {
+    background: url(/images/telegram.png);
+}
+
+.vk,
+.inst,
+.telegram {
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+}

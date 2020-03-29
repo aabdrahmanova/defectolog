@@ -1,0 +1,18 @@
+/* .feedback {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+} */
+
+.carousel {
+    width: 50%;
+    padding: 30px 40px;
+    margin: 100px auto;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px 0px rgba(66, 51, 51, 0.3);
+    background-color: #fff;
+    z-index: 1000;
+    /* position: fixed; */
+    bottom: 0;
+}
+

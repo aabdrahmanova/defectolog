@@ -1,0 +1,35 @@
+/* .services {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+} */
+
+.title {
+    text-align: center;
+    margin-top: 150px;
+    z-index: 1000;
+    position: relative;
+}
+
+
+.table {
+    width: 60%;
+    margin: 100px auto;
+    border-collapse: collapse;
+    z-index: 1000;
+    position: relative;
+}
+
+.table td {
+    padding: 20px 0;
+    border-bottom: 1px solid grey;
+}
+
+.table tr > td:last-child {
+    width: 30%;
+    text-align: right;
+}
+
+.table thead {
+    font-weight: bold;
+}
