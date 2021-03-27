@@ -1,6 +1,10 @@
 import React from 'react';
 import styles from './servicesBlock.module.css';
 import { useSpring, animated } from 'react-spring';
+import Container from '../../Container';
+import { Row, Col } from 'antd';
+
+// xs={0} sm={0} md={9} lg={10} xl={10} xxl={10}
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
 const trans1 = (x, y) => `translate3d(${x / 2}px,${y / 2}px,0)`
@@ -24,35 +28,42 @@ export const ServicesBlock = () => {
     return (
         <div className='section services'>
                 <h1 className="title">Услуги и стоимость</h1>
-                <table className={styles.table}>
-                    <thead>
-                        <tr>
-                            <td className={styles.service}>Услуга</td>
-                            <td className={styles.price}>Стоимость</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Диагностика и консультация</td>
-                            <td><animated.span>{props1.number}</animated.span>р.</td>
-                        </tr>
-                        <tr>
-                            <td>Занятие 1 час</td>
-                            <td><animated.span>{props2.number}</animated.span>р.</td>
-                        </tr>
-                        <tr>
-                            <td>Занятие 30 мин.</td>
-                            <td><animated.span>{props3.number}</animated.span>р.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <button className="btn">Записаться на консультацию</button>
-
-                    <animated.div style={contProps} class="cont" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
-                        <animated.div class="stars1" style={{ transform: props.xy.interpolate(trans1) }} />
-                        <animated.div class="stars2" style={{ transform: props.xy.interpolate(trans3) }} />
-                        <animated.div class="stars3" style={{ transform: props.xy.interpolate(trans4) }} />
-                    </animated.div>
+                <Container>
+                    <Row>
+                        <Col xs={{span:20, offset: 2}} sm={{span:22, offset: 1}} md={{span:20, offset: 2}} lg={{span:18, offset: 3}} xl={{span:16, offset: 4}} xxl={{span:16, offset: 4}}>
+                            <table className={styles.table}>
+                            <thead>
+                                <tr>
+                                    <td className={styles.service}>Услуга</td>
+                                    <td className={styles.price}>Стоимость</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Диагностика и консультация</td>
+                                    <td><animated.span>{props1.number}</animated.span>р.</td>
+                                </tr>
+                                <tr>
+                                    <td>Занятие 1 час</td>
+                                    <td><animated.span>{props2.number}</animated.span>р.</td>
+                                </tr>
+                                <tr>
+                                    <td>Занятие 30 мин.</td>
+                                    <td><animated.span>{props3.number}</animated.span>р.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </Col>
+                    </Row>
+                    
+                    <button className="btn"><a href="#contacts">Записаться на консультацию</a></button>
+                </Container>
+                
+                <animated.div style={contProps} className="cont" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
+                    <animated.div className="stars1" style={{ transform: props.xy.interpolate(trans1) }} />
+                    <animated.div className="stars2" style={{ transform: props.xy.interpolate(trans3) }} />
+                    <animated.div className="stars3" style={{ transform: props.xy.interpolate(trans4) }} />
+                </animated.div>
         </div>
     )
 }

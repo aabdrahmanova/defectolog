@@ -1,30 +1,27 @@
-.left {
-    width: 60%;
-    height: 100%;
-    float: left;
-    z-index: 1010;
-    padding: 300px 50px 50px 8%;
+.left, 
+.right {
+    width: 100%;
+    height: 100vh;
+    /* float: left; */
+    z-index: 10;
+    /* padding: 300px 50px 50px 8%; */
 
 }
 
 .right {
-    width: 40%;
-    height: 100%;
-    float: right;
-    background-color: #ded7d6;
-    padding: 300px 8% 50px 50px;
-}
-
-/* .contactsBlock {
+    /* width: 40%;
     height: 100vh;
-    position: relative;
-    z-index: 1001;
-    background-color: #fefefe;
-} */
+    float: right; */
+    background-color: #ded7d6;
+    /* padding: 300px 8% 50px 50px; */
+}
 
 .title {
     position: absolute;
+    margin: 0 auto;
     left: 45%;
+    padding-top: 130px;
+    z-index: 20;
 }
 
 .tel {
@@ -46,13 +43,6 @@
 .inst {
     background: url(/images/insta.png);
 }
-
-/* .whatsapp {
-    background: url(/images/whatsapp.png);
-    background-size: contain;
-    width: 80px;
-    height: 80px;
-} */
 
 .telegram {
     background: url(/images/telegram.png);

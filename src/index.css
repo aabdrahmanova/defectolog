@@ -3,17 +3,11 @@ body {
   font-family: -apple-system, Azbuka, 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif !important;
-    color: #534846;
+  color: #534846;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fefefe;
   font-size: 24px !important;
-}
-
-.container {
-  width: 90%;
-  margin: 0 auto;
-  position: relative;
 }
 
 .ant-carousel .slick-dots li button {
@@ -21,6 +15,10 @@ body {
   border: 2px solid #fdd44c !important;
   height: 8px !important;
   border-radius: 3px !important;
+}
+
+a {
+  color: #534846 !important;
 }
 
 button.btn {
@@ -33,6 +31,7 @@ button.btn {
   display: block;
   z-index: 1000;
   position: relative;
+  transition: .3s ease-in;
 }
 
 button.btn:hover {
@@ -189,7 +188,7 @@ button.btn:hover {
 
 .title {
   text-align: center;
-  padding-top: 150px;
+  padding-top: 0px;
   z-index: 1000;
   position: relative;
 }
@@ -236,3 +235,7 @@ p {
 #fp-nav li {
   padding: 0;
 }
+/* 
+.container {
+  border: 2px solid gray;
+} */

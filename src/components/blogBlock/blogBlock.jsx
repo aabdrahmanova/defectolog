@@ -1,6 +1,9 @@
 import React, { useRef } from 'react';
 import styles from './blogBlock.module.css';
 import { useSpring, animated, useChain } from 'react-spring';
+import articles from '../mocks.json';
+import Container from '../../Container';
+import { Row, Col } from 'antd';
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
 const trans1 = (x, y) => `translate3d(${x}px,${y * 1.3}px,0)`
@@ -17,46 +20,29 @@ export const BlogBlock = () => {
 
     return (
         <div className='section blogBlock'>
-           <h1 className="title">Блог</h1>
-            <div className={styles.flexbox}>
-                <div className={styles.box}>
-                    <div className={styles.pic}></div>
-                    <h3>Когда я могу помочь</h3>
-                    <p className={styles.article}>
-                    Этот вопрос довольно часто задают мне, только немного иначе:
-                    <br/>▶ с какого возраста вы занимаетесь с детьми и берете на диагностику?
-                    <br/>▶ с чем вы работаете?
-                    </p>
-                    <a>Читать полностью →</a>
-                </div>
-
-                <div className={styles.box}>
-                    <div className={styles.pic}></div>
-                    <h3>Когда я могу помочь</h3>
-                    <p className={styles.article}>
-                    Этот вопрос довольно часто задают мне, только немного иначе:
-                    <br/>▶ с какого возраста вы занимаетесь с детьми и берете на диагностику?
-                    <br/>▶ с чем вы работаете?
-                    </p>
-                    <a>Читать полностью →</a>
-                </div>
-
-                <div className={styles.box}>
-                    <div className={styles.pic}></div>
-                    <h3>Когда я могу помочь</h3>
-                    <p className={styles.article}>
-                    Этот вопрос довольно часто задают мне, только немного иначе:
-                    <br/>▶ с какого возраста вы занимаетесь с детьми и берете на диагностику?
-                    <br/>▶ с чем вы работаете?
-                    </p>
-                    <a>Читать полностью →</a>
-                </div>
-            </div>
-           <button className="btn">Еще больше статей</button>
-           <animated.div style={contProps} class="cont" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
-                <animated.div class="card1" style={{ transform: props.xy.interpolate(trans1) }} />
-                <animated.div class="card3" style={{ transform: props.xy.interpolate(trans3) }} />
-                <animated.div class="card4" style={{ transform: props.xy.interpolate(trans4) }} />
+            <Container>
+                <h1 className="title">Блог</h1>
+                    <Row 
+                        // gutter={{sm:[1, 1]}}
+                    >
+                        {articles.slice(0, 3).map((item, index) => 
+                            <Col xs={{span:22, offset:1}} sm={{span:20, offset:2}} md={{span:18, offset:3}} lg={{span:8, offset: 0}} xl={{span:8, offset: 0}} xxl={{span:8, offset: 0}}>
+                                <div className={styles.box}>
+                                    <div className={styles.pic}></div>
+                                    <h3>{item.title}</h3>
+                                    <p className={styles.article}>{item.announce}</p>
+                                    <a className={styles.link} href={`/article${index}`}>Читать полностью →</a>
+                                </div>
+                            </Col>
+                        )}
+                    </Row>
+                <button className="btn">Еще больше статей</button>
+            </Container>
+           
+           <animated.div style={contProps} className="cont" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
+                <animated.div className="card1" style={{ transform: props.xy.interpolate(trans1) }} />
+                <animated.div className="card3" style={{ transform: props.xy.interpolate(trans3) }} />
+                <animated.div className="card4" style={{ transform: props.xy.interpolate(trans4) }} />
             </animated.div>
         </div>
     )
