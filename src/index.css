@@ -10,11 +10,16 @@ body {
   font-size: 24px !important;
 }
 
+.ant-carousel {
+  pointer-events: none;
+}
+
 .ant-carousel .slick-dots li button {
   background: #fedc71 !important;
   border: 2px solid #fdd44c !important;
   height: 8px !important;
   border-radius: 3px !important;
+  pointer-events: all;
 }
 
 a {
@@ -32,6 +37,7 @@ button.btn {
   z-index: 1000;
   position: relative;
   transition: .3s ease-in;
+  cursor: pointer;
 }
 
 button.btn:hover {
@@ -49,6 +55,14 @@ button.btn:hover {
   height: 100px !important;
 }
 
+.ant-comment {
+  pointer-events: none;
+}
+
+.ant-comment-content-detail {
+  pointer-events: none;
+}
+
 .ant-comment-avatar {
   cursor: default !important;
 }
@@ -62,6 +76,7 @@ button.btn:hover {
 .ant-comment-content-author-time,
 .ant-comment-content {
   font-size: 18px !important;
+  pointer-events: none;
 }
 
 .ant-comment-content {

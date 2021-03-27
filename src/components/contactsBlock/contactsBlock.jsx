@@ -18,9 +18,9 @@ export const ContactsBlock = () => {
         <div className='section contactsBlock'>
             <Container>
             <h1 className={"title " + styles.title}>Контакты</h1>
-            <Row>
-                <Col className={styles.left}
-                    xs={18} sm={18} md={18} lg={18} xl={18} xxl={16}>
+            {/* <Row>
+                <Col className={styles.left} */}
+                    {/* xs={18} sm={18} md={18} lg={18} xl={18} xxl={16}> */}
                     <p>
                         Записаться на консультацию в г. Балаково можно на сайте или любым другим удобным для Вас способом. 
                         <br/>Для предварительной записи или чтобы задать вопрос, заполните форму. 
@@ -83,9 +83,9 @@ export const ContactsBlock = () => {
                     <button className="btn">Предварительная запись</button>
                 </Form>
                     
-                </Col>
-                <Col className={styles.right}
-                    xs={6} sm={6} md={6} lg={6} xl={6} xxl={8}>
+                {/* </Col> */}
+                {/* <Col className={styles.right} */}
+                    {/* xs={6} sm={6} md={6} lg={6} xl={6} xxl={8}> */}
                     <h3 className={styles.tel}>Телефон:</h3>
                     <p>+7(987)330-41-74</p>
                     <div className={styles.social}>
@@ -95,8 +95,8 @@ export const ContactsBlock = () => {
                         <a target="_blank" href="https://teleg.run/kat_osadchaya"  className={styles.telegram}></a>
 
                     </div>
-                </Col>
-            </Row>
+                {/* </Col>
+            </Row> */}
             
             </Container>
         </div>
